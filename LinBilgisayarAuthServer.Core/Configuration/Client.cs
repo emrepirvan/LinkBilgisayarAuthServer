@@ -8,8 +8,8 @@ namespace LinBilgisayarAuthServer.Core.Configuration
 {
     public class Client
     {
-        public string ClientId { get; set; }
-        public string ClientSecret { get; set; }
+        public string Id { get; set; }
+        public string Secret { get; set; }
 
         //www.myapi1.com
         public List<string> Audiences { get; set; }
