@@ -10,12 +10,12 @@ namespace LinBilgisayarAuthServer.Core.Services
 {
     public interface IAuthenticationService
     {
-        Task<Response<TokenDto>> CreateToken(LoginDto loginDto);
+        Task<Response<TokenDto>> CreateTokenAsync(LoginDto loginDto);
 
         Task<Response<TokenDto>> CreateTokenByRefreshToken(string refreshToken);
 
         Task<Response<NoDataDto>> RevokeRefreshToken(string refreshToken); // elegeçirilmiş tokenı etkisiz yapmak için metot
 
-        Task<Response<ClientTokenDto>> CreateTokenByClient(ClientLoginDto loginDto);
+        Response<ClientTokenDto> CreateTokenByClient(ClientLoginDto clientLoginDto);
     }
 }
